@@ -8,14 +8,14 @@ fn main() {
     
     let secret = rand::thread_rng().gen_range(1,101);
 
-    println!("Make a guess! {}", secret);
+    println!("Make a guess!");
 
     loop {
         let mut guess = String::new();
 
         io::stdin().read_line(&mut guess).expect("Failed to read line");
 
-        println!("Your guessed {}!", guess.trim());
+        println!("You guessed {}!", guess.trim());
 
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
