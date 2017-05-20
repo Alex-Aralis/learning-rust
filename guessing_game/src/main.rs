@@ -14,7 +14,7 @@ fn main() {
 
     io::stdin().read_line(&mut guess).expect("Failed to read line");
 
-    println!("Your guessed {}!", guess);
+    println!("Your guessed {}!", guess.trim());
 
     let guess: u32 = guess.trim().parse().expect("PLS GIVE NUMBER.");
 
